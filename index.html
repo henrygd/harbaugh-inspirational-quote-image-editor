@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <base target="_blank">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Harbaugh Image Editor">
+  <meta property="og:description" content="Create inspirational Jim Harbaugh images.">
+  <title>Harbaugh Image Editor</title>
+  <link rel='icon' href='img/favicon.png'>
+  <link rel="stylesheet" href="css/marx.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link id="gfonts" href="https://fonts.googleapis.com/css?family=Raleway:500|Vollkorn|Dancing+Script|Oswald|Permanent+Marker|Indie+Flower|Rock+Salt|La+Belle+Aurore" rel="stylesheet">
+</head>
+<body>
+	<main>
+		<div class="editor" id="editor">
+			<div class="quote" id="quote" contenteditable="true">
+				<div>"Edit quote here"</div>
+			</div>
+		</div>
+
+		<div class="options">
+			<div>
+				<h3>Position</h3>
+				<p>X <input type="range" id="x_axis" min="0" max="90" value="10"></p>
+				<p>Y <input type="range" id="y_axis" min="0" max="90" value="30"></p>
+			</div>
+			<div>
+				<h3>Width</h3>
+				<input type="range" id="width_slider" min="20" max="100" value="100">
+			</div>
+			<div>
+				<h3>Font Size</h3>
+				<input type="range" id="fsize_slider" min="8" max="100" value="35">
+			</div>
+			<div>
+				<h3>Font Color</h3>
+				<div id="fff_color" class='circle-icon'></div><div id="1a1a1a_color" class='circle-icon' style='background-color:#1a1a1a'></div>
+			</div>
+			<div>
+				<h3>Mask</h3>
+				<div id="light-mask" class='circle-icon'></div><div id="dark-mask" class='circle-icon'></div>
+			</div>
+		</div>
+
+		<div id="font-root"></div>
+
+		<div id="background-root"></div>
+
+		<div class="btn-wrapper">
+			<button id="screenshot_button">CREATE DOWNLOADABLE IMAGE</button>
+			<button id="imgur_button">UPLOAD TO IMGUR</button>
+		</div>
+
+		<div id="imgur_links" class="btn-wrapper"></div>
+
+		<div id="output_wrapper"></div>
+	</main>
+
+	<script src="js/html2canvas.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>
